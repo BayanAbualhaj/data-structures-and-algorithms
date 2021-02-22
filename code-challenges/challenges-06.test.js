@@ -130,6 +130,18 @@ function updateNumbers(obj) {
    }
    return array;
 }
+// New idea when using .join() it will remove the inner array and put the elements into just one array
+
+// const updateNumbers = (obj) => {
+//   // Solution code here...
+//   let arr = Object.entries(obj);
+//   console.log(arr);
+//   let newArr = [];
+//   arr.forEach(item => {
+//     newArr.push(item.join(': '));
+//   })
+//   return newArr;
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
