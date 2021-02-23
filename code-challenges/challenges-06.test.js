@@ -91,13 +91,14 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
+  let valueChecked = false;
   const arr = Object.values(obj);
   arr.forEach((element) => {
     if(element === value) {
-      return true;
+      valueChecked = true;
     }
   })
-  return false;
+  return valueChecked;
 };
 
 
