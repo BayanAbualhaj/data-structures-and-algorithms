@@ -1,80 +1,65 @@
 'use strict';
 
-// /* ------------------------------------------------------------------------------------------------
-// CHALLENGE 1 - Review
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 1 - Review
 
-// Write a function that finds maximum value in an array
-// using the 'reduce' method.
+Write a function that finds maximum value in an array
+using the 'reduce' method.
 
-// E.g. [4,2,7,5,9,2] -> 9
-// ------------------------------------------------------------------------------------------------ */
+E.g. [4,2,7,5,9,2] -> 9
+------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
-  let maxValue = arr.reduce((acc, indx) => {
-    return acc > indx ? acc : acc = indx;
-  });
-  return maxValue;
 };
 
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 2
 
-// /* ------------------------------------------------------------------------------------------------
-// CHALLENGE 2
+Write a function named findMax that takes in a matrix of positive numbers and returns the number with the highest value.
 
-// Write a function named findMax that takes in a matrix of positive numbers and returns the number with the highest value.
+For example: 
+[
+  [1, 3, 4, 5],
+  [4, 5, 6],
+  [23, 5, 5]
+]
 
-// For example: 
-// [
-//   [1, 3, 4, 5],
-//   [4, 5, 6],
-//   [23, 5, 5]
-// ]
-
-// return: 23
-// ------------------------------------------------------------------------------------------------ */
+return: 23
+------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
-  let maxValue = 0;
-  matrix.forEach(arr => {
-    arr.forEach(value => maxValue > value ? maxValue : maxValue = value);
-  });
-  return maxValue;
 };
 
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 3
 
-// /* ------------------------------------------------------------------------------------------------
-// CHALLENGE 3
+Write a function named totalSum that takes in a matrix of numbers and returns the totalSum of all the numbers.
 
-// Write a function named totalSum that takes in a matrix of numbers and returns the totalSum of all the numbers.
+For example: 
+[
+  [1, 3, 4, 5],
+  [4, 5, 1],
+  [2, 5, 5]
+]
 
-// For example: 
-// [
-//   [1, 3, 4, 5],
-//   [4, 5, 1],
-//   [2, 5, 5]
-// ]
-
-// return: 35
-// ------------------------------------------------------------------------------------------------ */
+return: 35
+------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
-  let totalSum = 0;
-  matrix.forEach(arr => arr.forEach(value => totalSum += value));
-  return totalSum;
 };
 
 
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 4
 
-// /* ------------------------------------------------------------------------------------------------
-// CHALLENGE 4
+You friend Pat has a chain of stores around the greater Seattle area. He specializes in selling salmon cookies. Pat has data for the hourly sales of cookies per hour for each store. He wants to create an array of the total number of cookies sold per hour for all of his stores combined.
 
-// You friend Pat has a chain of stores around the greater Seattle area. He specializes in selling salmon cookies. Pat has data for the hourly sales of cookies per hour for each store. He wants to create an array of the total number of cookies sold per hour for all of his stores combined.
+Write a function named grandTotal that adds up the cookies sales for each hour of operation for all of the stores combined. For example, the first element in the hourlySales array should be the sum of the cookies sold in the 9:00 a.m. hour at all five stores combined.
 
-// Write a function named grandTotal that adds up the cookies sales for each hour of operation for all of the stores combined. For example, the first element in the hourlySales array should be the sum of the cookies sold in the 9:00 a.m. hour at all five stores combined.
+For this example, the total at 9:00 a.m. is 17 + 26 + 7 + 5 + 33, or 88 total cookies.
 
-// For this example, the total at 9:00 a.m. is 17 + 26 + 7 + 5 + 33, or 88 total cookies.
-
-// Return the array of the total number of cookies sold per hour for all of the stores combined.
-// ------------------------------------------------------------------------------------------------ */
+Return the array of the total number of cookies sold per hour for all of the stores combined.
+------------------------------------------------------------------------------------------------ */
 
 const hoursOpen = ['9 a.m.', '10 a.m.', '11 a.m.', '12 p.m.', '1 p.m.', '2 p.m.', '3 p.m.', '4 p.m.', '5 p.m.', '6 p.m.', '7 p.m.', '8 p.m.'];
 
@@ -88,44 +73,28 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-  let results = [];
-  var totCookies = 0;
-  for (let i = 0; i < stores[0].length; i++) {
-    for (let j = 0; j < stores.length; j++) {
-      totCookies += stores[j][i];
-    }
-    results.push(totCookies);
-    totCookies = 0;
-  }
-  return results;
+
 };
 
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 5
 
-// /* ------------------------------------------------------------------------------------------------
-// CHALLENGE 5
+Pat has decided that he would also like to organize his data as objects containing the number of cookies sold per hour and the time.
 
-// Pat has decided that he would also like to organize his data as objects containing the number of cookies sold per hour and the time.
+Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 
-// Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
-
-// Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
-// ------------------------------------------------------------------------------------------------ */
+Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
+------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
   // Solution code here...
-  let results = [];
-  data.forEach((value, idx) => {
-    results.push({ sales: `${value} cookies`, time: `${hours[idx]}` });
-  });
-  return results;
-}
+};
 
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 6
 
-// /* ------------------------------------------------------------------------------------------------
-// CHALLENGE 6
-
-// Write a function named howManyTreats that will return the quantity of treats you need to pick up from the pet store today from this array.
-// ------------------------------------------------------------------------------------------------ */
+Write a function named howManyTreats that will return the quantity of treats you need to pick up from the pet store today from this array.
+------------------------------------------------------------------------------------------------ */
 
 const errands = [
   {
@@ -144,11 +113,7 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
-  let treats = 0;
-  arr.forEach(object => object.items.forEach(element => element.name === 'Treats' ? treats = element.quantity : treats));
-  return treats;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
