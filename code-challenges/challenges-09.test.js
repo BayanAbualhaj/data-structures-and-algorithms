@@ -1,22 +1,22 @@
 'use strict';
 
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 1 - Review
+// /* ------------------------------------------------------------------------------------------------
+// CHALLENGE 1 - Review
 
-Write a function named transformToLis that, given an object, returns an array of the key value pairs as html list items.
+// Write a function named transformToLis that, given an object, returns an array of the key value pairs as html list items.
 
-For example: 
-{
-  name: 'bob',
-  age: 32
-}
+// For example: 
+// {
+//   name: 'bob',
+//   age: 32
+// }
 
-Becomes: 
-[
-<li>name: bob</li>,
-<li>age: 32</li>
-]
------------------------------------------------------------------------------------------------- */
+// Becomes: 
+// [
+// <li>name: bob</li>,
+// <li>age: 32</li>
+// ]
+// ------------------------------------------------------------------------------------------------ */
 
 function transformToLis(obj){
   // Solution code here...
@@ -54,34 +54,41 @@ Write a function named addPurchases that, given an array of objects as input, us
 }
 
 ------------------------------------------------------------------------------------------------ */
-
 const addPurchases = (arr) => {
   // Solution code here...
-  let sum = arr.reduce((acc, val) => {
-    acc += val.purchasePrice;
-    return acc;
+  let totalAmount= arr.reduce((acc,val)=>{
+    return acc+ val.purchasePrice;
   },0);
-  return sum;
+  return totalAmount;
 };
 
+// const addPurchases = (arr) => {
+//   // Solution code here...
+//   let sum = arr.reduce((acc, val) => {
+//     acc += val.purchasePrice;
+//     return acc;
+//   },0);
+//   return sum;
+// };
 
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 4
 
-Write a function named countNumberOfElements that, given an array as input, uses reduce to count the number of elements in the array.
+// /* ------------------------------------------------------------------------------------------------
+// CHALLENGE 4
 
-Note: You may not use the array's built-in length property.
------------------------------------------------------------------------------------------------- */
+// Write a function named countNumberOfElements that, given an array as input, uses reduce to count the number of elements in the array.
+
+// Note: You may not use the array's built-in length property.
+// ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
   return arr.reduce(accumulator => accumulator += 1);
 };
 
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 5
+// /* ------------------------------------------------------------------------------------------------
+// CHALLENGE 5
 
-Write a function named returnNames that, given the Star Wars data, below, uses reduce to return an array containing the names of the characters.
------------------------------------------------------------------------------------------------- */
+// Write a function named returnNames that, given the Star Wars data, below, uses reduce to return an array containing the names of the characters.
+// ------------------------------------------------------------------------------------------------ */
 
 let starWarsData = [{
   name: 'Luke Skywalker',
@@ -135,26 +142,41 @@ let starWarsData = [{
 
 
 const returnNames = (arr) => {
-  return arr.reduce((accumulator, character, index) => {
-    accumulator[index] = character.name;
-    return accumulator;
-  }, []);
+  return arr.reduce((acc,val)=>{
+    return [...acc,val.name];
+  },[]);
 };
 
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 6
+// const returnNames = (arr) => {
+//   return arr.reduce((accumulator, character, index) => {
+//     accumulator[index] = character.name;
+//     return accumulator;
+//   }, []);
+// };
 
-Write a function named reversedString that takes in a string and returns a string with the letters in reverse order.
+// /* ------------------------------------------------------------------------------------------------
+// CHALLENGE 6
 
-Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
------------------------------------------------------------------------------------------------- */
+// Write a function named reversedString that takes in a string and returns a string with the letters in reverse order.
+
+// Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
+// ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (arr) => {
-  return arr.split('').reduce((accumulator, value, idx) => {
-    accumulator += arr[arr.length - 1 - idx];
-    return accumulator;
-  }, '');
+  let str= arr.split('');
+  let newStr=str.reduce((acc,val)=>{
+    return [val,...acc]; 
+  },[]);
+  return newStr.join('');
 };
+
+
+// const reversedString = (arr) => {
+//   return arr.split('').reduce((accumulator, value, idx) => {
+//     accumulator += arr[arr.length - 1 - idx];
+//     return accumulator;
+//   }, '');
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
