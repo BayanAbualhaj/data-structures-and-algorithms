@@ -108,21 +108,29 @@ const alphabetize = (arr) => {
   return array;
 };
 
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 6
+// /* ------------------------------------------------------------------------------------------------
+// CHALLENGE 6
 
-Write a function named sortByPrice that takes in an array of objects, each of which has a 'price' property, and sorts those objects by price, lowest to highest, returning the same array.
+// Write a function named sortByPrice that takes in an array of objects, each of which has a 'price' property, and sorts those objects by price, lowest to highest, returning the same array.
 
-Here is an example of the input:
-[
-  {name: 'Sweatshirt', price: 45},
-  {name: 'Bookmark', price: 2.50},
-  {name: 'Tote bag', price: 15}
-];
------------------------------------------------------------------------------------------------- */
+// Here is an example of the input:
+// [
+//   {name: 'Sweatshirt', price: 45},
+//   {name: 'Bookmark', price: 2.50},
+//   {name: 'Tote bag', price: 15}
+// ];
+// ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
   // Solution code here...
+  arr.sort(function (a, b) {
+    if (a.price < b.price) return 1;
+    if (b.price < a.price) return -1;
+
+    return 0;
+  });
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
