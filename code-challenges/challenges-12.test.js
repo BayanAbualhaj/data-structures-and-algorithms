@@ -10,6 +10,10 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
+  let maxValue = arr.reduce((acc, indx) => {
+    return acc > indx ? acc : acc = indx;
+  });
+  return maxValue;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,6 +32,11 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  let maxValue = 0;
+  matrix.forEach(arr => {
+    arr.forEach(value => maxValue > value ? maxValue : maxValue = value);
+  });
+  return maxValue;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,6 +55,9 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  let totalSum = 0;
+  matrix.forEach(arr => arr.forEach(value => totalSum += value));
+  return totalSum;
 };
 
 
@@ -73,7 +85,16 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-
+  let results = [];
+  var totCookies = 0;
+  for (let i = 0; i < stores[0].length; i++) {
+    for (let j = 0; j < stores.length; j++) {
+      totCookies += stores[j][i];
+    }
+    results.push(totCookies);
+    totCookies = 0;
+  }
+  return results;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -88,6 +109,12 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let results = [];
+  data.forEach((value, idx) => {
+    results.push({ sales: `${value} cookies`, time: `${hours[idx]}` });
+  });
+  return results;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,6 +140,9 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  let treats = 0;
+  arr.forEach(object => object.items.forEach(element => element.name === 'Treats' ? treats = element.quantity : treats));
+  return treats;
 };
 
 /* ------------------------------------------------------------------------------------------------
