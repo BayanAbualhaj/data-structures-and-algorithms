@@ -9,7 +9,7 @@ reverse the array without using reverse method :)
 
 
 ## Solution
-![white-board]()
+![white-board](https://raw.githubusercontent.com/BayanAbualhaj/data-structures-and-algorithms/master/401challenges/arrayReverse/assets/Blank%20board%20(1).png)
 
 
 ### checklist for the challenge 
