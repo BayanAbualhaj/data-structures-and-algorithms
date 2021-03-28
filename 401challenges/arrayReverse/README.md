@@ -9,4 +9,11 @@ reverse the array without using reverse method :)
 
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![white-board]()
+
+
+### checklist for the challenge 
+
+- [x] build a function 
+- [x] test on repl.it
+- [x] complete readme file 
