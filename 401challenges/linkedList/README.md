@@ -6,14 +6,9 @@ we should create  a linked-list and it tests
 create insert, include and to sting method for the linked list class
 
 ## Approach & Efficiency
-Big O time : O(1)
+Big O time : O(n)
 Big O space: O(1)
 
-## API
+## solution 
 
-I used 3 Methods:
-1.  Insert Function : take a value and insert it to the Linked list 
-
-2. Includes Function : to search through the LL and find the matched value and return true if its there and false if not 
-
-3. ToString Function: that print all the LL values in a string
+![whiteboard](https://raw.githubusercontent.com/BayanAbualhaj/data-structures-and-algorithms/master/401challenges/linkedList/assets/Blank%20board%20(9).png)

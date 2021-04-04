@@ -45,15 +45,49 @@ class LinkedList {
         console.log('dwedecedcercferfcer', string);
         return string;
     }
+
+    append(value) {
+        var newNode = new Node(value);
+        if(!this.head){
+            this.head = newNode;
+        } else {
+            let lastNode = this.head;
+            while(lastNode.next) {
+                lastNode = lastNode.next;
+            }
+            lastNode.next = newNode;
+        }
+    }
+
+    insertAfter(value, newVal) {
+        let node = new Node(newVal);
+        let current = this.head;
+        while(current) {
+          if(current.value === value) {
+            let temp = current.next;
+            current.next = node;
+            node.next = temp;
+          }
+          current = current.next;
+        }
+    }
+
+    insertBefore(value, newVal) {
+        let node = new Node(newVal);
+        let current = this.head;
+        while(current && current.next !== null) {
+          if(current.next.value === value) {
+            let temp = current.next;
+            current.next = node;
+            node.next = temp;
+          }
+          current = current.next;
+        }
+    }
+
+
 }
 
-const ll = new LinkedList();
-
-ll.insert(2);
-ll.insert(5);
-ll.includes(5);
-ll.toString();
-console.log(ll);
 
 module.exports={
     Node: Node,
