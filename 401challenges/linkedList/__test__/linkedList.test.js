@@ -140,7 +140,55 @@ test("Should insert a node after the last node of the linked list", () => {
   
 })
 
-
+test("Where k is greater than the length of the linked list", () => {
+    let linkedList = new LinkedList();
+  
+    linkedList.insert(100);
+    linkedList.insert(200);
+    linkedList.insert(300);
+    linkedList.append(1000);
+  
+    expect(linkedList.kthFromEnd(5)).toEqual("Exception");
+})
+  
+test("Where k and the length of the list are the same", () => {
+    let linkedList = new LinkedList();
+  
+    linkedList.insert(100);
+    linkedList.insert(200);
+    linkedList.append(10);
+  
+    expect(linkedList.kthFromEnd(2)).toEqual(200);
+})
+  
+test("Where k is not a positive integer", () => {
+    let linkedList = new LinkedList();
+  
+    linkedList.insert(100);
+    linkedList.insert(200);
+    linkedList.append(10);
+  
+    expect(linkedList.kthFromEnd(-1)).toEqual("Exception");
+})
+  
+test("Where the linked list is of a size 1", () => {
+    let linkedList = new LinkedList();
+  
+    linkedList.insert(100);
+  
+  
+    expect(linkedList.kthFromEnd(0)).toEqual(100);
+})
+  
+test("“Happy Path” where k is not at the end, but somewhere in the middle of the linked list", () => {
+    let linkedList = new LinkedList();
+    
+    linkedList.insert(100);
+    linkedList.insert(200);
+    linkedList.append(10);
+  
+    expect(linkedList.kthFromEnd(1)).toEqual(100);
+})
 
 
 
