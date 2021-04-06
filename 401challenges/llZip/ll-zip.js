@@ -19,23 +19,28 @@ list2.insert(12);
 
 function zipL(list1, list2) {
     let zippedList = new LinkedList();
-    let value1 = list1.head;
-    // console.log('*****check value1*****',value1);
-    let value2 = list2.head;
-    let length = list1.length + list2.length;
-    // console.log('**********',length);
     if(list1 && list2){
-
-        for (let i = 0; i < length; i++) {
-            if (i % 2 === 0) {   
-                zippedList.append(value1.value);
-                value1 = value1.next;
-            } else if (i % 2 !== 0) {       
-                zippedList.append(value2.value);
-                value2 = value2.next;
+        
+        let value1 = list1.head;
+        // console.log('*****check value1*****',value1);
+        let value2 = list2.head;
+        let length = list1.length + list2.length;
+        // console.log('**********',length);
+        if(list1.length=== list2.length){
+    
+            for (let i = 0; i < length; i++) {
+                if (i % 2 === 0) {   
+                    zippedList.append(value1.value);
+                    value1 = value1.next;
+                } else if (i % 2 !== 0) {       
+                    zippedList.append(value2.value);
+                    value2 = value2.next;
+                }
             }
+            return zippedList.toString();
+        }else{
+            return "Exception";
         }
-        return zippedList.toString();
     }else{
         return "Exception";
     }
