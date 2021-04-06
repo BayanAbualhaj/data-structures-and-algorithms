@@ -39,10 +39,10 @@ class LinkedList {
         while (this.head) {
             string += `{${this.head.value}} => `
             this.head = this.head.next;
-            console.log('wdccecece');
+            // console.log('wdccecece');
         }
         string += "NULL";
-        console.log('dwedecedcercferfcer', string);
+        console.log('____toString___', string);
         return string;
     }
 
@@ -95,19 +95,28 @@ class LinkedList {
         let i = 0;
 
         while (current){
-            if (position === i){
+            if (position ===i){
+                console.log(current.value);
                 return current.value;
             }
             current = current.next;
             i++;
         }
-        
+        console.log('Exception');
         return "Exception";
     }
 
 
 }
-
+let ll= new LinkedList();
+ll.insert(2);
+ll.insert(5);
+ll.insert(7);
+ll.insert(10);
+ll.append(13);
+ll.kthFromEnd(7);
+ll.toString();
+// ll.kthFromEnd
 
 module.exports={
     Node: Node,
