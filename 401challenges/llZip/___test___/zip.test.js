@@ -21,21 +21,21 @@ ll3.append(404);//ll2
 ll3.append(7070);//ll1
 ll3.append(4444);//ll2
 
+let ll4= new LinkedList();
+console.log(ll4.length);
 
 test("if the returned list from the zip function equal to the same list should be... ", () => {
     // expect(zipLists(ll1,ll2)).toEqual(ll3);
     expect(zipLists(ll1,ll2).toString()).toEqual(ll3.toString());
 })
 
-test("2 lists not equal length", () => {
-
-    expect(zipLists(ll1, ll3)).toEqual("Exception");
-  
-});
-
 test("if one of the list is undefined",()=>{
     let ll4=undefined;
     expect(zipLists(ll1, ll4)).toEqual("Exception");
 
+});
+
+test("if one of the ll length's is null return Exception",()=>{
+    expect(zipLists(ll1,ll4)).toEqual("Exception");
 });
   
