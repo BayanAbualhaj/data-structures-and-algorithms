@@ -10,7 +10,7 @@ the challenge is to handle a stack with a queue
 4. draw a white board 
 
 
-* [hereIsTheCode]()
+* [hereIsTheCode](https://github.com/BayanAbualhaj/data-structures-and-algorithms/blob/master/401challenges/queueWithStacks/queue-with-stacks.js)
 
 _________________
 

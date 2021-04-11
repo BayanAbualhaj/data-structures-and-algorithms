@@ -49,26 +49,26 @@ class Stack{
 
     isEmpty(){
         if (this.top) {
-            console.log(true);
+            // console.log(true);
             return true;
         }else{
-            console.log(false);
+            // console.log(false);
             return false;
         }
     }
 }
 
-const stack=new Stack();
-stack.push(6);
-stack.push(7);
-stack.push(8);
-stack.push(1000);
-stack.push(1220);
-stack.pop();
-stack.pop();
-stack.pop();
-stack.peek();
-stack.isEmpty();
+// const stack=new Stack();
+// stack.push(6);
+// stack.push(7);
+// stack.push(8);
+// stack.push(1000);
+// stack.push(1220);
+// stack.pop();
+// stack.pop();
+// stack.pop();
+// stack.peek();
+// stack.isEmpty();
 
 
 // console.log(stack);
@@ -107,7 +107,7 @@ class Queue{
             console.log('Exception');
             return 'Exception';
         }else{
-            console.log(this.front.value);
+            // console.log(this.front.value);
             return this.front.value;
         }
     }
@@ -122,19 +122,19 @@ class Queue{
 }
 
 
-let queue= new Queue();
+// let queue= new Queue();
 
-queue.enqueue(4)
-queue.enqueue(44)
-queue.enqueue(444)
-queue.enqueue(4444)
+// queue.enqueue(4)
+// queue.enqueue(44)
+// queue.enqueue(444)
+// queue.enqueue(4444)
 
-queue.peek();
-queue.dequeue();
+// queue.peek();
+// queue.dequeue();
 
-queue.isEmpty();
+// queue.isEmpty();
 
-console.log(queue);
+// console.log(queue);
 
 module.exports={
     Node:Node,
