@@ -14,6 +14,6 @@ Implement the following methods:
 - space O(1)
 
 ## Solution
-* [code]()
+* [code](https://github.com/BayanAbualhaj/data-structures-and-algorithms/blob/master/401challenges/fifoAnimalShelter/fifo-animal-shelter.js)
 
 ![white board](./assets/Blankboard(16).png)
