@@ -22,4 +22,4 @@ Big O of:
 
 * [code](https://github.com/BayanAbualhaj/data-structures-and-algorithms/blob/master/401challenges/multiBracketValidation/multi-bracket-validation.js)
 
-![solution](/assets/whiteboard.png)
+![solution](https://github.com/BayanAbualhaj/data-structures-and-algorithms/blob/master/401challenges/multiBracketValidation/assets/whiteboard.png?raw=true)
