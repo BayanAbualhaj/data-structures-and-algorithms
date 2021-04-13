@@ -20,6 +20,6 @@ Big O of:
 
 ## Solution
 
-* [code]()
+* [code](https://github.com/BayanAbualhaj/data-structures-and-algorithms/blob/master/401challenges/multiBracketValidation/multi-bracket-validation.js)
 
 ![solution](/assets/whiteboard.png)
