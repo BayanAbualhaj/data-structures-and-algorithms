@@ -72,29 +72,27 @@ class BinarySearchTree{
     add(value){
         let newNode= new Node(value);
         if(this.root){
-            this.addNode(this.root,newNode);
+            const traverse =(node)=>{
+                if(node.value< value){
+                    if(node.right){
+                        traverse(node.right);
+                    }else{
+                        node.right=newNode;
+                    }
+                }else if(node.value> value){
+                    if(node.left){
+                        traverse(node.left);
+                    }else{
+                        node.left=newNode;
+                    }
+                }
+            }
+            traverse(this.root);
         }else{
             this.root=newNode;
         }
     }
-
-    addNode(node,newNode){
-        if(node.value< newNode.value){
-            if(node.right){
-
-                this.addNode(node.right,newNode);
-            }else{
-                node.right=newNode;
-            }
-        }else if(node.value> newNode.value){
-            if(node.left){
-                this.addNode(node.left,newNode);
-            }else{
-                node.left=newNode;
-            }
-        }
-    }
-
+    
     contains(value){
         if(!this.root){
             return false;
@@ -119,6 +117,10 @@ class BinarySearchTree{
     }
 }
 
+const newNode = new Node(2);
+const tree = new BinarySearchTree(newNode);
+tree.add(3)
+console.log(tree);
 
 module.exports={
     BinaryTree: BinaryTree,
