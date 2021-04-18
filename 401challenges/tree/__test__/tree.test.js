@@ -68,13 +68,14 @@ describe('Binary Tree', () => {
       const tree = new BinarySearchTree(one);
       expect(tree.root.value).toBe(4);
     });
-  
+     
+
     it('Should successfully add a left child and right child to a single root node', () => {
       const newNode = new Node(2);
       const tree = new BinarySearchTree(newNode);
       tree.add(1);
       tree.add(3);
-  
+      console.log(tree);
       expect(tree.root.left.value).toBe(1);
       expect(tree.root.right.value).toBe(3);
       expect(tree.root.value).toBe(2);
