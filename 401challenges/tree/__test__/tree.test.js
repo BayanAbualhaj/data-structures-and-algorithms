@@ -40,6 +40,20 @@ describe('Binary Tree', () => {
       const postOrder = tree.postOrder();
       expect(postOrder).toEqual(expected);
     });
+
+    it('if empty return null',()=>{
+      let newTree= new BinaryTree(null);
+      let findMax= newTree.findMaximumBinaryTree();
+
+      expect(findMax).toBeNull;
+    });
+
+    it('find the max value',()=>{
+      let expected=8;
+      let findMax= tree.findMaximumBinaryTree();
+
+      expect(findMax).toEqual(expected);
+    })
   });
 
   describe('Node Module', () => {

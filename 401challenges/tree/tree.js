@@ -62,6 +62,24 @@ class BinaryTree{
         traverse(this.root);
         return arr;
     }
+
+    findMaximumBinaryTree(){
+        if(this.root){
+            let max=this.root.value;
+            let arr=this.inOrder();
+    
+            arr.forEach(e=>{
+                if(e>max){
+                    max=e;
+                }
+            });
+    
+            return max;
+
+        }else{
+            return null;
+        }
+    }
 }
 
 class BinarySearchTree{
