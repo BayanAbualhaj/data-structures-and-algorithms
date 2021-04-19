@@ -1,5 +1,5 @@
 'use strict';
-
+const {queue}= require('../stacksAndQueues/stacks-and-queues');
 class Node{
     constructor(value,right=null,left=null){
         this.value=value;
@@ -76,6 +76,40 @@ class BinaryTree{
     
             return max;
 
+        }else{
+            return null;
+        }
+    }
+
+    breadthFirst(){
+        let current= this.root;
+        
+        if(current){
+            
+            let arr =[current];
+            let breadth=[];
+            
+            let i=0;
+            while(current){
+    
+                current=arr[i]
+                if(current){
+                    breadth.push(current.value);
+    
+                    let left=current.left;
+                    let right=current.right;
+    
+                    if(left){
+                        arr.push(left)
+                    }
+                    if(right){
+                        arr.push(right);
+                    }
+                }
+                i++;
+            }
+    
+            return breadth;
         }else{
             return null;
         }

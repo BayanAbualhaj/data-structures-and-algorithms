@@ -53,7 +53,23 @@ describe('Binary Tree', () => {
       let findMax= tree.findMaximumBinaryTree();
 
       expect(findMax).toEqual(expected);
-    })
+    });
+
+    it('return a breadth first traversal ',()=>{
+      let expected=[1,2,3,4,5,6,7,8];
+      let firstBreadth= tree.breadthFirst();
+      console.log(firstBreadth);
+
+      expect(expected).toEqual(firstBreadth);
+      expect(expected.length).toEqual(firstBreadth.length);
+    });
+
+    it('if empty return null',()=>{
+      let newTree= new BinaryTree(null);
+      let expected=newTree.breadthFirst();
+
+      expect(expected).toBeNull;
+    });
   });
 
   describe('Node Module', () => {
@@ -89,7 +105,7 @@ describe('Binary Tree', () => {
       const tree = new BinarySearchTree(newNode);
       tree.add(1);
       tree.add(3);
-      console.log(tree);
+      // console.log(tree);
       expect(tree.root.left.value).toBe(1);
       expect(tree.root.right.value).toBe(3);
       expect(tree.root.value).toBe(2);
