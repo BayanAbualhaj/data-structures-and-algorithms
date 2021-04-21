@@ -14,7 +14,7 @@
     - space O(h)
 
 ## Solution
-* [code]()
+* [code](https://github.com/BayanAbualhaj/data-structures-and-algorithms/blob/master/401challenges/fizzBuzzTree/fizz-buzz-tree.js)
 
 * WhiteBoard:
 
