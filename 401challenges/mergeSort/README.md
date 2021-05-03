@@ -17,7 +17,7 @@ Review the pseudocode below, then trace the algorithm by stepping through the pr
 
 ## Solution
 
-* [code]()
+* [code](https://github.com/BayanAbualhaj/data-structures-and-algorithms/blob/master/401challenges/mergeSort/mergeSort.js)
 
 
 ![code](./board.png)
