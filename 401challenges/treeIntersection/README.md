@@ -4,7 +4,7 @@
 * Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
 
 ## Approach & Efficiency
-* Time : O(n)
+* Time : O(n^2)
 * Space:O(1)
 
 ## Solution
