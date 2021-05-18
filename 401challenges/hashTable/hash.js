@@ -23,6 +23,7 @@ class HashTable{
         if(!this.table[hash]){
             return 'Not Found';
         }else{
+            console.log(this.table[hash]);
             return this.table[hash];
         }
     }
