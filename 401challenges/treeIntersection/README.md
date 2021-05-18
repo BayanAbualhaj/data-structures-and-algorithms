@@ -8,7 +8,7 @@
 * Space:O(1)
 
 ## Solution
-* (code)[]
+* [code](https://github.com/BayanAbualhaj/data-structures-and-algorithms/blob/master/401challenges/treeIntersection/treeIntersection.js)
 
 ![](./board.png)
 
